@@ -7,10 +7,8 @@ class Fracao:
         else:
             print("Denominador inválido")
 
-
     def valor_real(self):
         return str(self.numerador) + "/" + str(self.denominador)
-
 
     def soma(self, f2):
         df = self.mmc(self.denominador, f2.denominador)
@@ -18,13 +16,11 @@ class Fracao:
         n2 = (df / f2.denominador) * f2.numerador
         return str(int(n1) + int(n2)) + "/" + str(df)
 
-
     def dif(self, f2):
         df = self.mmc(self.denominador, f2.denominador)
         n1 = (df / self.denominador) * self.numerador
         n2 = (df / f2.denominador) * f2.numerador
         return str(int(n1) - int(n2)) + "/" + str(df)
-
 
     def mult(self, f2):
         r = Fracao(1,1)
@@ -32,17 +28,14 @@ class Fracao:
         r.denominador = self.denominador * f2.denominador
         return str(r.numerador) + "/" + str(r.denominador)
 
-
     def div(self, f2):
         r = Fracao(1,1)
         r.numerador = self.numerador * f2.denominador
         r.denominador = self.denominador * f2.numerador
         return str(r.numerador) + "/" + str(r.denominador)
 
-
     def denominador_zero(self, f2):
             return True if self.denominador != 0 & f2.denominador != 0 else False
-
 
     def mmc(self,n1, n2):
         if (n1> n2):
