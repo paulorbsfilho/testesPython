@@ -40,6 +40,10 @@ class Fracao:
         return str(r.numerador) + "/" + str(r.denominador)
 
 
+    def denominador_zero(self, f2):
+            return True if self.denominador != 0 & f2.denominador != 0 else False
+
+
     def mmc(self,n1, n2):
         if (n1> n2):
             maior = n1
