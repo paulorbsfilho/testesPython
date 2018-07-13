@@ -46,10 +46,10 @@ class TestFracao(unittest.TestCase):
         self.assertEqual(res,"-8/8")
 
     def test_dif_com_denominador_negativo(self):
-        f1 = Fracao(-1, 2)
+        f1 = Fracao(1, -2)
         f2 = Fracao(2, 4)
         res = f1.dif(f2)
-        self.assertEqual(res, "-8/8")
+        self.assertEqual(res, "8/-8")
 
 
 if __name__ == '__main__':

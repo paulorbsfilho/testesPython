@@ -1,7 +1,7 @@
 class Fracao:
 
     def __init__(self, numerador, denominador):
-        if (denominador >= 0):
+        if (denominador != 0):
             self.numerador = numerador
             self.denominador = denominador
         else:
@@ -50,7 +50,7 @@ class Fracao:
 
 
 if __name__ == '__main__':
-    f1 = Fracao(1,2)
+    f1 = Fracao(1,-2)
     f2 = Fracao(2,4)
     res = f1.soma(f2)
     res2 = f1.dif(f2)
